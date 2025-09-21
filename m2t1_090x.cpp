@@ -7,17 +7,25 @@ using namespace std;
 int main()  {
     // Takis sales program
     // Variables are like mailboxes
-    string name = "Takis";
+    string first_name, last_name, full_name;
+    string product = "Takis";
     int num_takis = 10;
     double cost_each = 0.25;
 
-    cout << "Welcome to the " << name << " store!" << endl;
-    cout << "There are " << num_takis << " takis in stock." << endl;
-    cout << "They cost $" << cost_each << " each." << endl;
+    //Greet the customer
+    cout << "Welcome to the " << product << " store!" << endl;
+    cout << "What's your first name? ";
+    cin >> first_name;
+    cout << "What's youre last name? ";
+    cin >> last_name;
+    full_name = first_name + " " + last_name;
+    cout << "Nice to meet you, " <<full_name << endl;
 
-    // Find out the total price 
-    double total_cost = num_takis * cost_each;
-    cout << "The price for all of them is: $" << total_cost << endl;
+
+    // Ask how much they'd like to purchase
+
+    // Calculate total price 
+    // Give the result
 
     cout << endl;
     return 0; // no errors
