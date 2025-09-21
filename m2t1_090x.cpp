@@ -1,23 +1,24 @@
-// CSC 134
-#include <iostsream>
+
+
+#include <iostream>
 using namespace std;
 
 
-int main() {
+int main()  {
+    // Takis sales program
+    // Variables are like mailboxes
+    string name = "Takis";
+    int num_takis = 10;
+    double cost_each = 0.25;
 
-    // Set up all variables
-    string first_name, last_name, full_name; // holds customer name
-    string product = "takis"; // change to whatever you like 
-    double cost_each = 0.99;
-    double total_cost;
+    cout << "Welcome to the " << name << " store!" << endl;
+    cout << "There are " << num_takis << " takis in stock." << endl;
+    cout << "They cost $" << cost_each << " each." << endl;
 
+    // Find out the total price 
+    double total_cost = num_takis * cost_each;
+    cout << "The price for all of them is: $" << total_cost << endl;
 
-    // Greet the customer 
-    cout << "Welcome to our " << product << " store!" << endl;
-
-
-
-    // Ask how much they'd like to purchase
-
-    // Calculate total price 
-    // Give the result
+    cout << endl;
+    return 0; // no errors
+}
