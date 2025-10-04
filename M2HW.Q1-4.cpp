@@ -45,6 +45,8 @@ int main() {
     cout << "Account number: " << accountNumber << endl;
     cout << "Final balance: $" << finalBalance << endl;
 
+    cout << "###########################################" << endl;
+
     /////////////////////////////////////////////////////
 
     // Question #2: Program for calculating General Crates charge and profit
@@ -87,6 +89,8 @@ int main() {
     cout << "Cost to build: $" << cost << endl;
     cout << "Charge to customer: $" << charge << endl;
     cout << "Profit: $" << profit << endl;
+    cout << "###########################################" << endl;
+
 
     /////////////////////////////////////////////////////
 
@@ -103,6 +107,20 @@ int main() {
 
     leftover = (pizzas*slicesPerPizza) - (visitors * 3);
     cout << "\nLeftover slices: " << leftover << endl;
+    cout << "###########################################" << endl;
+
+
+    /////////////////////////////////////////////////////
+
+    // Question #4: Write FTCC cheering program
+
+    string school = "FTCC";
+    string team = "Trojans";
+
+    cout << "Let's go " << school << endl;
+    cout << "Let's go " << school << endl;
+    cout << "Let's go " << school << endl;
+    cout << "Let's go " << team << endl;
 
 return 0;
 
