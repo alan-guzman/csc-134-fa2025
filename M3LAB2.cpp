@@ -15,30 +15,34 @@ int main () {
     char letterGrade;
 
     // Input
-
+    if (grade < 0 || grade > 100) {
+        cout << "Invalid. Enter a number between 0 and 100." << endl;
+        return 0;
+    }
 
     // Establish letter grade 
     if (grade >= 90 && grade <= 100) {
-        letterGrade = "A";
+        letterGrade = 'A';
     }
     else if (grade >= 80 && grade <= 89) {
-        letterGrade = "B";
+        letterGrade = 'B';
     }
     else if (grade >= 70 && grade <= 79) {
-        letterGrade = "C";
+        letterGrade = 'C';
     }
     else if (grade >= 60 && grade <= 69) {
-        letterGrade = "D";
+        letterGrade = 'D';
     }
     else {
-        letterGrade = "F";
+        letterGrade = 'F';
     }
 
     // Ask user for input 
-     
+    cout << "Enter your numerical grade: ";
+    cin >> grade;
 
     // Display result
+    cout << "Your letter grade is: " << letterGrade << endl;
 
-
-
+    return 0;
 }
