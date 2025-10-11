@@ -14,6 +14,10 @@ int main () {
     int grade;
     char letterGrade;
 
+    // Ask user for input 
+    cout << "Enter your numerical grade: ";
+    cin >> grade;
+
     // Input
     if (grade < 0 || grade > 100) {
         cout << "Invalid. Enter a number between 0 and 100." << endl;
@@ -36,10 +40,6 @@ int main () {
     else {
         letterGrade = 'F';
     }
-
-    // Ask user for input 
-    cout << "Enter your numerical grade: ";
-    cin >> grade;
 
     // Display result
     cout << "Your letter grade is: " << letterGrade << endl;
