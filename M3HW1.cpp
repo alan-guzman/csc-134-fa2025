@@ -96,6 +96,25 @@ cout << "--------------------------------------------------------------------" <
     // Question 4: Math Practice Program
 cout << "Question 4" << endl;
 cout << "----------" << endl;
+srand(time(0)); 
+
+int num1 = rand() % 10;
+int num2 = rand() % 10;
+
+cout << "What is " << num1 << " plus " << num2 << "?" << endl;
+int user_answer;
+cin >> user_answer;
+
+int correct_answer = num1 + num2;
+
+if (user_answer == correct_answer) {
+    cout << "Correct!" << endl;
+}
+else {
+    cout << "Incorrect." << endl;
+}
+
+cout << "--------------------------------------------------------------------" << endl;
 
     return 0;
 }
