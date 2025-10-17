@@ -1,0 +1,17 @@
+{
+    // Disable inline AI-like inline suggestions
+    "editor.inlineSuggest.enabled": false,
+
+    // Disable suggestion popups while typing
+    "editor.quickSuggestions": {
+        "other": false,
+        "comments": false,
+        "strings": false
+    },
+
+    // Prevent suggestions from being triggered by characters like '.'
+    "editor.suggestOnTriggerCharacters": false,
+
+    // Disable lightbulb quick-fix UI
+    "editor.lightbulb.enabled": false
+}
