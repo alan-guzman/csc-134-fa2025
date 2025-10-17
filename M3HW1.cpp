@@ -61,5 +61,28 @@ cout << "Total: $" << total << endl;
 
 cout << "--------------------------------------------------------------------" << endl;
 
+    // Question 3: Choose Your Own Adventure Game
+cout << "Question 3" << endl;
+cout << "------------------" << endl;
+
+cout << "When running back home trying to make it before dark, you slip and fall through a hole. You wake up in a dark tunnel with a running stream of water, which is another dimension. It's so dark you cannot see your own hands. You have to get back to your own dimension. Do you go left or right?" << endl;
+string choice1; 
+cin >> choice1;
+
+if (choice1 == "Left") {
+    cout << "You go left, and eventually fall through a hole, leading to a room with a door, and a trapdoor with stairs going down. Do you go through the door or the trapdoor?" << endl;
+    string choice 2;
+    cin >> choice 2;
+
+    if (choice2 == "Door") {
+        cout << "The door leads back to your house, you have gotten back to your dimension. Victory!" << endl;
+    }
+    else if (choice2 == "Trapdoor") {
+        cout << "You go down the ladder through the trapdoor. You slip and fall endlessly. You are trapped in another dimension. Defeat." << endl;
+    }
+}
+else if (choice1 == "Right")
+    cout << 
+
     return 0;
 }
