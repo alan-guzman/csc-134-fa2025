@@ -6,6 +6,7 @@ Alan Guzman-Gomez
 */
 
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 int main() {
@@ -48,14 +49,17 @@ if (order_type == 1) {
     tip = meal_price * 0.15;
 }
 
-total + meal_price + tax + tip;
+total = meal_price + tax + tip;
 
+cout << setprecision (2) << fixed;
 cout << "Please come again!" << endl;
 cout << "Meal price: $" << meal_price << endl;
 cout << "Tax: $" << tax << endl;
 cout << "Tip: $" << tip << endl;
 cout << "-------------" << endl;
 cout << "Total: $" << total << endl;
+
+cout << "--------------------------------------------------------------------" << endl;
 
     return 0;
 }

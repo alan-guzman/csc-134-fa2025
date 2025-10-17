@@ -13,5 +13,5 @@
     "editor.suggestOnTriggerCharacters": false,
 
     // Disable lightbulb quick-fix UI
-    "editor.lightbulb.enabled": false
+    "editor.lightbulb.enabled": "off"
 }
