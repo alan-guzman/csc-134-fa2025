@@ -10,11 +10,16 @@ using namespace std;
 
 int main() {
 
-    // Part 1, just say "hi" five times 
-    int count = 1;
-    while (count < 5) {
-        cout << "Hello number " << count << endl;
+    cout << "Program 5-3" << endl;
+    cout << "-----------" << endl;
+    int number = 0;
+
+    while (number < 5)
+    {
+        cout << "Hello\n";
+        number ++;
     }
+    cout << "That's all!\n";
 
     return 0; // done
 }
