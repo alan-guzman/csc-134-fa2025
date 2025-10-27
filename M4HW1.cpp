@@ -11,14 +11,13 @@ using namespace std;
 int main() {
 
 // Declare variables 
-int firstNum, secondNum, answer;
-firstNum = 5;
-// SecondNum = 1;
-// Answer = FirstNum * SecondNum;
+const int firstNum = 5;
+int multiplier = 1;
 
-for (int i=1; i<= 5; i++) {
-    answer = firstNum * i;
-    cout << firstNum << " times " << i << " is " << answer << endl;
+while (multiplier<= 12) {
+    int answer = firstNum * multiplier;
+    cout << firstNum << " times " << multiplier << " is " << answer << "." << endl;
+    multiplier++;
 }
 
     return 0;
