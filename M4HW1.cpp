@@ -11,12 +11,18 @@ using namespace std;
 int main() {
 
 // Declare variables 
-const int firstNum = 5;
+int userNum;
 int multiplier = 1;
 
+cout << "Enter a number from 1 to 12: " << endl;
+
+if (!(cin >> userNum)) {
+    cout << "Invalid input." << endl;
+}
+
 while (multiplier<= 12) {
-    int answer = firstNum * multiplier;
-    cout << firstNum << " times " << multiplier << " is " << answer << "." << endl;
+    int answer = userNum * multiplier;
+    cout << userNum << " times " << multiplier << " is " << answer << "." << endl;
     multiplier++;
 }
 
