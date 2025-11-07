@@ -6,23 +6,31 @@ Alan Guzman-Gomez
 */
 
 #include <iostream>
+#include <math.h>
 using namespace std;
 
 // Given 2 numbers, print them out nicely on a line
+// Print number and result
 void printResult(int number, int result) {
-    cout << number << " squared= " << result << endl;
+    cout << number << " : " << result << endl;
+}
+
+// Exponential growth function 
+int growth (int number) {
+    int result = pow((double)2, (double)number); // 2 to the power
+    return result;
 }
 
 int main() {
     
-    int count = 1;
-    int result;
+    // For this problem, model exponential growth rather than squared
+    int number, result;
 
-    while (count <= 10) {
-        result = count * count; // Squared
-
-        printResult(count,result);
-        count++;
+    number = 1;
+    while (number <= 10) {
+        result = growth(number);
+        printResult(number,result);
+        number++;
     }
 
 
