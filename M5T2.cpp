@@ -8,15 +8,20 @@ Alan Guzman-Gomez
 #include <iostream>
 using namespace std;
 
+// Given 2 numbers, print them out nicely on a line
+void printResult(int number, int result) {
+    cout << number << " squared= " << result << endl;
+}
+
 int main() {
     
-    int count = 0;
+    int count = 1;
     int result;
 
-    while (count < 30) {
-        // What is 100 times the count
-        result = 100 * count;
-        cout << count << " " << result << endl;
+    while (count <= 10) {
+        result = count * count; // Squared
+
+        printResult(count,result);
         count++;
     }
 
