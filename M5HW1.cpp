@@ -9,12 +9,14 @@ Alan Guzman-Gomez
 #include <iostream>
 #include <iomanip> 
 #include <cmath>
+#include <limits>
 using namespace std;
 const double PI = 3.14159;
 
-int main () {
+
 
     // Question 1 
+    void question1(){
     cout << "------------------------------------------" << endl;
     cout << "                Question One              " << endl;
     cout << "------------------------------------------" << endl;
@@ -47,8 +49,10 @@ int main () {
     << month2 << ", and " << month3 << " is " <<
     fixed << setprecision(2) << averageRainfall << " inches." 
     << endl;
+    }
 
     // Question 2
+    void question2() {
     cout << "------------------------------------------" << endl;
     cout << "                Question Two              " << endl;
     cout << "------------------------------------------" << endl;
@@ -71,8 +75,10 @@ int main () {
     cout << "Height: " << fixed << setprecision(2) << height << endl;
     cout << "Hyperrectangle Volume: " << fixed << setprecision(4) <<
     volume << " square units" << endl;
+    }
 
     // Question 3
+    void question3() {
     cout << "------------------------------------------" << endl;
     cout << "              Question Three              " << endl;
     cout << "------------------------------------------" << endl; 
@@ -121,14 +127,16 @@ int main () {
 
     cout << "The Roman numeral version of " << number << " is " 
     << roman_numeral << "." << endl;
+    }
 
     // Question 4
+    void question4() {
     cout << "------------------------------------------" << endl;
     cout << "              Question Four               " << endl;
     cout << "------------------------------------------" << endl; 
 
     int choice;
-    double area, r, base;
+    double area, r, base, length, width, height;
 
     // Menu
     cout << "Geometry Calculator" << endl;
@@ -171,8 +179,10 @@ int main () {
             cout << "Please try again and enter a value within 1-4." << endl;
             break;
     }
+    }
 
     // Question 5
+    void question5() {
     cout << "------------------------------------------" << endl;
     cout << "              Question Five               " << endl;
     cout << "------------------------------------------" << endl; 
@@ -194,7 +204,55 @@ int main () {
         cout << setw(4) << hour << setw (10) << fixed 
         << setprecision(0) << distanceTraveled << endl;
     }
+    }
+
+int main() {
+
+    int choice;
+
+    do {
+    cout << "------------------------------------------" << endl;
+    cout << "               MAIN MENU                  " << endl;
+    cout << "------------------------------------------" << endl; 
+    cout << "1. Average Rainfall Calculator" << endl;
+    cout << "2. Three Dimensional Hyperrectangle Calculator" << endl;
+    cout << "3. Roman Numeral Converter" << endl;
+    cout << "4. Geometry Calculator" << endl;
+    cout << "5. Distance Traveled Calculator" << endl;
+    cout << "6. Quit" << endl;
+    cout << "Enter your choice (1-6): ";
+
+    while (!(cin >> choice)) {
+        cout << "Please try again and enter a value within 1-6: ";
+        cin.clear();
+        cin.ignore(100, '\n');
+    }
+    switch (choice) {
+        case 1:
+            question1();
+            break;
+        case 2:
+            question2();
+            break;
+        case 3:
+            question3();
+            break;
+        case 4:
+            question4();
+            break;
+        case 5:
+            question5();
+            break;
+        case 6:
+            cout << "Exiting program..." << endl;
+            break;
+        default:
+            cout << "Please try again and enter a value within 1-6." << endl;
+            break;
+    }
+    } while (choice != 6);
 
     return 0;
 }
+
 
