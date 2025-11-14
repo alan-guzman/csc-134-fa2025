@@ -8,7 +8,9 @@ Alan Guzman-Gomez
 #include <string>
 #include <iostream>
 #include <iomanip> 
+#include <cmath>
 using namespace std;
+const double PI = 3.14159;
 
 int main () {
 
@@ -119,6 +121,57 @@ int main () {
 
     cout << "The Roman numeral version of " << number << " is " 
     << roman_numeral << "." << endl;
+
+    // Question 3
+    cout << "------------------------------------------" << endl;
+    cout << "              Question Four               " << endl;
+    cout << "------------------------------------------" << endl; 
+
+    int choice;
+    double area, r, base;
+
+    // Menu
+    cout << "Geometry Calculator" << endl;
+    cout << "1. Calculate the Area of a Circle" << endl;
+    cout << "2. Cacluate the Area of a Rectangle" << endl;
+    cout << "3. Cacluate the Area of a Triangle" << endl;
+    cout << "4. Quit" << endl;
+    cout << "Enter your choice (1-4): ";
+    cin >> choice;
+
+    switch (choice) {
+        case 1:
+            cout << "Enter the circle's radius: ";
+            cin >> r;
+            area = PI * pow(r, 2);
+            cout << "The area is " << fixed << setprecision(5)
+            << area << endl;
+            break;
+        case 2:
+            cout << "Enter the rectangle's length: ";
+            cin >> length;
+            cout << "Enter the rectangle's width: ";
+            cin >> width;
+            area = length * width;
+            cout << "The area is " << fixed << setprecision(5)
+            << area << endl;
+            break;
+        case 3:
+            cout << "Enter the triangle's base: ";
+            cin >> base;
+            cout << "Enter the triangle's height: ";
+            area = base * height * 0.5;
+            cout << "The area is " << fixed << setprecision(5)
+            << area << endl;
+            break;
+        case 4:
+            cout << "Leaving calculator and returning to the main menu now." << endl;
+            break;
+        default:
+            cout << "Please try again and enter a value within 1-4." << endl;
+            break;
+    }
+
 
     return 0;
 }
