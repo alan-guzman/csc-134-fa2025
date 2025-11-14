@@ -122,7 +122,7 @@ int main () {
     cout << "The Roman numeral version of " << number << " is " 
     << roman_numeral << "." << endl;
 
-    // Question 3
+    // Question 4
     cout << "------------------------------------------" << endl;
     cout << "              Question Four               " << endl;
     cout << "------------------------------------------" << endl; 
@@ -172,6 +172,28 @@ int main () {
             break;
     }
 
+    // Question 5
+    cout << "------------------------------------------" << endl;
+    cout << "              Question Five               " << endl;
+    cout << "------------------------------------------" << endl; 
+
+    double speed, totalHours;
+
+    cout << "What is the speed of the vehicle in MPH? ";
+    cin >> speed;
+
+    cout << "How many hours has it traveled? ";
+    cin >> totalHours;
+
+    cout << "Hour   |   Distance Traveled" << endl;
+    cout << "----------------------------" << endl;
+
+    for (int hour = 1; hour <= totalHours; ++hour) {
+        double distanceTraveled = speed * hour;
+
+        cout << setw(4) << hour << setw (10) << fixed 
+        << setprecision(0) << distanceTraveled << endl;
+    }
 
     return 0;
 }
