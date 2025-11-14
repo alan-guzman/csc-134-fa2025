@@ -46,5 +46,30 @@ int main () {
     fixed << setprecision(2) << averageRainfall << " inches." 
     << endl;
 
+    // Question 2
+    cout << "------------------------------------------" << endl;
+    cout << "                Question Two              " << endl;
+    cout << "------------------------------------------" << endl;
+
+    double width, length, height, volume;
+
+    cout << "Enter the width of the block: ";
+    cin >> width;
+
+    cout << "Enter the length of the block: ";
+    cin >> length;
+
+    cout << "Enter the height of the block: ";
+    cin >> height;
+
+    volume = width * length * height;
+
+    cout << "Width: " << fixed << setprecision(2) << width << endl;
+    cout << "Length: " << fixed << setprecision(2) << length << endl;
+    cout << "Height: " << fixed << setprecision(2) << height << endl;
+    cout << "Hyperrectangle Volume: " << fixed << setprecision(4) <<
+    volume << " square units" << endl;
+
     return 0;
 }
+
