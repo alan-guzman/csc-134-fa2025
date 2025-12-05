@@ -74,6 +74,13 @@ void method2() {
     cout << "Average = " << car_avg << endl;
 
     // Print ASCII Chart 
-    cout << ""
+    cout << "Weekly Traffic Bar Chart" << endl;
+    for (int i = 0; i < SIZE; i++) {
+        cout << days[i] << " (" << car[i] << "): ";
 
+        for (int j = 0; j < car[i]; j++) {
+            cout << "*";
+        }
+        cout << endl;
+    }
 }
