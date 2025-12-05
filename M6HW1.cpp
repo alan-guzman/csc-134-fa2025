@@ -13,14 +13,9 @@ const string CORRECT_COMBO = "7ZAV";
 string player_input;
 
 // Function Prototypes
-// Any functions you make will need to
-// be listed here, in this format, at the top.
-// This is so the compiler knows to save
-// room for them in the final program.
 void main_menu();
 void choice_grab_ring();
 void choice_ignore_it();
-void choice_go_home();
 void choice_other_pocket();
 void choice_throw_it();
 void choice_throw_away();
@@ -33,7 +28,7 @@ void choice_continue_door();
 // TODO: add more choices here
 
 int main() {
-  cout << "M5LAB1 - Choose Your Own Adventure" << endl;
+  cout << "M6HW1 - Choose Your Own Adventure Project" << endl;
   // load up the main menu
   main_menu();
   // when we return here, we're done
@@ -48,10 +43,10 @@ void main_menu() {
   cout << "Do you:" << endl;
   cout << "1. Grab the ring and continue your run" << endl;
   cout << "2. Ignore it and keep running" << endl;
-  cout << "3. Get weird vibes and go home to take a rest day." << endl;
+  cout << "3. Call the police to report a missing ring." << endl;
   cout << "4. I don't want to play anymore, this game is lame" << endl;
-  cout << "5. Call the police to report a missing ring"
-  cout << "Choose (1-5): ";
+  
+  cout << "Choose (1-4): ";
   int choice;
   cin >> choice;
   if (1 == choice) {
@@ -59,12 +54,10 @@ void main_menu() {
   } else if (2 == choice) {
     choice_ignore_it();
   } else if (3 == choice) {
-    choice_go_home();
+    choice_report_it();
   } else if (4 == choice) {
     cout << "Okay fine, quitting game." << endl;
     return; // go back to main()
-  } else if (5 == choice) {
-    choice_report_it();
   } else {
     cout << "That's not a valid choice, please try again." << endl;
     cin.ignore(); // clear the user input
@@ -110,14 +103,6 @@ void choice_ignore_it() {
     choice_call_police();
   }
 }
-
-void choice_go_home() { 
-  cout << "----------------------------------" << endl;
-  cout << "The ring has a very scary aura. This is enough to make you think you should take a rest day." << endl;
-  cout << "You go home, having completely and unknowingly dodged the cursed ring by not letting greed consume you." << endl;
-  cout << "You survived." << endl;
-  cout << "VICTORY" << endl;
- }
 
  void choice_other_pocket() {
   cout << "----------------------------------" << endl;
@@ -172,7 +157,7 @@ void choice_go_home() {
   cout << "VICTORY" << endl;
  }
 
- void choice_report_it(); {
+ void choice_report_it() {
     cout << "----------------------------------" << endl;
     cout << "You call the police to report a missing ring, as any good samaritan would." << endl;
     cout << "As soon as you pull out your phone, it slips from your grasp, and you reach to pick it up." << endl;
@@ -180,28 +165,33 @@ void choice_go_home() {
     cout << "You scoff, angry and startled, and look up at the perpetrator." << endl;
     cout << "Once you get a good look, you realize its not a person at all, its a giant pig standing on two legs!" << endl;
     cout << "PIG speaks to you:" << endl;
-    cout << ""YOU MUST ESCAPE, YOU ARE NOT IN YOUR WORLD ANYMORE.""
-    cout << "Do you: "
+    cout << "YOU MUST ESCAPE, YOU ARE NOT IN YOUR WORLD ANYMORE." << endl;
+    cout << "Do you: " << endl;
     cout << "1. Shout and run away." << endl;
     cout << "2. Gather your courage and inquire about your situation." << endl;
+    int choice;
     cout << "Choose 1 or 2." << endl;
+    cin >> choice;
     if (1 == choice) {
     choice_shout_away();
-  } else if (2 == choice) {
+    } else if (2 == choice) {
     choice_have_courage();
-  }
+    }
+    }
 
-  void choice_shout_away(); {
+  void choice_shout_away() {
+    cout << "----------------------------------" << endl; 
     cout << "You shout in fear and quickly get up and run away." << endl;
     cout << "That was a mistake." << endl;
     cout << "PIG yells after you:" << endl;
-    cout << ""FOOL. YOU WILL MEET YOUR DEMISE."" << endl;
+    cout << "FOOL. YOU WILL MEET YOUR DEMISE." << endl;
     cout << "You run regardless, and fall through a large hole." << endl;
     cout << "You fall endlessly, and you never made it back home." << endl;
     cout << "DEFEAT" << endl;
   }
 
-  void choice_have_courage(); {
+  void choice_have_courage() {
+    cout << "----------------------------------" << endl; 
     cout << "You swallow your fear and ask the pig what he means." << endl;
     cout << "Pig tells you:" << endl;
     cout << "ONCE YOU TURN AROUND, THERE WILL BE A DOOR. GO THROUGH IT." << endl;
@@ -209,7 +199,7 @@ void choice_go_home() {
     cout << "EACH OTHER DOOR WILL CONTAIN AN ITEM YOU HAVE LOST IN YOUR LIFE." << endl;
     cout << "USE THESE NUMBERS TO GET BACK HOME." << endl;
     cout << "Pig then shifts to his side, and on his shoulder is a branded combination: 7ZAV." << endl;
-    cout << "With hesitation, you turn around, and open an eerie door." << endl;
+    cout << "With hesitation, you turn around and open an eerie door." << endl;
     cout << "You walk in." << endl;
     cout << "Walking down the hallway, you think about how this task is so easy!" << endl;
     cout << "Just then, you hear a distant bark from one of the rooms." << endl;
@@ -217,6 +207,7 @@ void choice_go_home() {
     cout << "Do you: " << endl;
     cout << "1. Quickly open the door to grab your dog." << endl;
     cout << "2. Begrudgingly continue to the door at the end of the hall." << endl;
+    int choice;
     cout << "Choose 1 or 2: ";
     cin >> choice;
     if (1 == choice) {
@@ -226,7 +217,8 @@ void choice_go_home() {
     }
     }
 
-    void choice_grab_dog(); {
+    void choice_grab_dog() {
+      cout << "----------------------------------" << endl; 
         cout << "You grab your dog, reunited once again after many years." << endl;
         cout << "Your dog doesn't move, and suddenly, your hands are full of dust." << endl;
         cout << "You turn around quickly, and the door out has disappeared." << endl;
@@ -234,14 +226,22 @@ void choice_go_home() {
         cout << "DEFEAT" << endl;
     }
 
-    void choice_continue_door(); {
-        cout << "A tear falls from your eye as you walk past, and you come upon the final door." << endl;
-        cout << "Enter the combination: " << endl;
-        cin >> player_input;
+    void choice_continue_door() {
+      cout << "----------------------------------" << endl; 
+      cout << "A tear falls from your eye as you walk past, and you come upon the final door with a padlock." << endl;
+      cout << "Enter the combination: " << endl;
+      cin >> player_input;
+      if (player_input == CORRECT_COMBO) {
+        cout << "The door opens with a hiss, and you walk into the bright light on the other side." << endl;
+        cout << "Once you're on the other side, you're greeted by your family's worried faces." << endl;
+        cout << "They ask where you were, and you hug them with a newfound appreciation." << endl;
+        cout << "You made it back to your world." << endl;
+        cout << "VICTORY" << endl;
+      } else {
+        cout << "Your finger slipped, and you didn't enter the code correctly." << endl;
+        cout << "A fatal mistake." << endl;
+        cout << "The door melts into a puddle, as do the others, as you try running back." << endl;
+        cout << "You are crushed." << endl;
+        cout << "DEFEAT" << endl;
+      }
     }
-
- }
-
-
-
-// any new choices go here
