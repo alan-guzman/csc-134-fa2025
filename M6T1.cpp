@@ -74,7 +74,7 @@ void method2() {
     cout << "Average = " << car_avg << endl;
 
     // Print ASCII Chart 
-    cout << "Weekly Traffic Bar Chart" << endl;
+    cout << "----------Weekly Traffic Bar Chart----------" << endl;
     for (int i = 0; i < SIZE; i++) {
         cout << days[i] << " (" << car[i] << "): ";
 
@@ -83,4 +83,6 @@ void method2() {
         }
         cout << endl;
     }
+    cout << "--------------------------------------------" << endl;
+
 }
