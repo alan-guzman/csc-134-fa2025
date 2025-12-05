@@ -30,8 +30,8 @@ enum Room {
     ENTRANCE_HALL = 0,
     LIBRARY = 1,
     SUNROOM = 2,
-    Greenhouse = 3,
-    BASEMENT = 4,
+    GREENHOUSE = 3,
+    ATTIC = 4,
     NUM_ROOMS = 5
 };
 
@@ -42,16 +42,16 @@ int main() {
         "Library",
         "Sunroom",
         "Greenhouse",
-        "Basement"
+        "Attic"
     };
     
     // Room descriptions array
     string roomDescriptions[NUM_ROOMS] = {
-        "A grand entrance hall with a dusty chandelier hanging above.",
-        "Rows of old, dusty, and interesting books. Has cozy chairs.",
-        "A spacious sunroom with an old stove and wooden counter.",
-        "An overgrown greenhouse with stone pathways and a small fountain.",
-        "A dark, damp basement with cobwebs in the corners."
+        "An entrance hall with large, beautiful skylights.",
+        "Rows of old, dusty, interesting books and has soft chairs.",
+        "A spacious sunroom with a large telescope and comfortable couches.",
+        "A large greenhouse with stone pathways and plants bigger than people.",
+        "A cozy attic with a large TV and more skylights."
     };
     
     // Adjacency list using a 2D array
@@ -81,7 +81,7 @@ int main() {
     // Sunroom connections
     connections[SUNROOM][NORTH] = -1;               // No connection north
     connections[SUNROOM][EAST] = -1;                // No connection east
-    connections[SUNROOM][SOUTH] = BASEMENT;         // Sunroom -> South -> Basement
+    connections[SUNROOM][SOUTH] = ATTIC;         // Sunroom -> South -> Attic
     connections[SUNROOM][WEST] = ENTRANCE_HALL;     // Sunroom -> West -> Entrance Hall
     
     // Greenhouse connections
@@ -90,11 +90,11 @@ int main() {
     connections[GREENHOUSE][SOUTH] = -1;                // No connection south
     connections[GREENHOUSE][WEST] = -1;                 // No connection west
     
-    // Basement connections
-    connections[BASEMENT][NORTH] = SUNROOM;         // Basement -> North -> Sunroom
-    connections[BASEMENT][EAST] = -1;               // No connection east
-    connections[BASEMENT][SOUTH] = -1;              // No connection south
-    connections[BASEMENT][WEST] = -1;               // No connection west
+    // Attic connections
+    connections[ATTIC][NORTH] = SUNROOM;         // Attic -> North -> Sunroom
+    connections[ATTIC][EAST] = -1;               // No connection east
+    connections[ATTIC][SOUTH] = -1;              // No connection south
+    connections[ATTIC][WEST] = -1;               // No connection west
     
     // Game state
     int currentRoom = ENTRANCE_HALL; // Start in the Entrance Hall
@@ -122,7 +122,7 @@ int main() {
         
         // Get player input
         string command;
-        cout << "\nWhat would you like to do? ";
+        cout << "\nWhere would you like to go? ";
         cin >> command;
         
         // Process movement commands
